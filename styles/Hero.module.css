@@ -1,0 +1,122 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left {
+  position: relative;
+  width: 842px;
+  height: 600px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 600px;
+  padding: 5rem;
+}
+
+.arrowButton {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.prevArrow,
+.nextArrow {
+  position: relative;
+  width: 100px;
+  height: 70px;
+  background-color: var(--Black);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.prevArrow:hover,
+.nextArrow:hover {
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.rightHeading {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.rightText {
+  font-size: 1em;
+  line-height: 1.2;
+  color: var(--Dark-Gray);
+  font-weight: 300;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.shopText {
+  margin-right: 20px;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
+  letter-spacing: 5px;
+}
+
+.shop:hover .shopText {
+  margin-right: 40px;
+  letter-spacing: 7px;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    height: 320px;
+  }
+
+  .right {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    margin: auto;
+  }
+
+  .rightHeading {
+    font-size: 1.5em;
+  }
+
+  .rightText {
+    font-size: 10px;
+    margin-bottom: 2.5rem;
+  }
+
+  .arrowButton {
+    top: -12%;
+    right: 0;
+    left: unset;
+    bottom: unset;
+  }
+
+  .prevArrow,
+  .nextArrow {
+    width: 70px;
+    height: 40px;
+  }
+}
